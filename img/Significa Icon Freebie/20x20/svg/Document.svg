@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Document</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="20x20/Document" stroke="#36434D">
+            <g id="Document">
+                <g id="Icon" transform="translate(2.000000, 0.000000)">
+                    <path d="M15.5,19.5 L15.5,0.5 L5,0.5 L0.5,5.5 L0.5,19.5 L15.5,19.5 Z M5.5,1 L5.5,5.5 L1,5.5" id="Line-75"></path>
+                    <path d="M4.5,12.5 L9.5,12.5" id="Line-74"></path>
+                    <path d="M4.5,9.5 L10.5,9.5" id="Line-73"></path>
+                    <path d="M4.5,15.5 L11.5,15.5" id="Line-72"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Add Card</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="18" height="20" rx="3"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18" height="20" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Add-Card">
+            <g id="Add-Card">
+                <g id="Icon" transform="translate(1.000000, 0.000000)">
+                    <use id="Line-9" stroke="#35424C" mask="url(#mask-2)" stroke-width="2" stroke-linecap="square" xlink:href="#path-1"></use>
+                    <path d="M3.5,6.5 L9.5,6.5" id="Line-8" stroke="#36434D" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M6.5,3.5 L6.5,9.5" id="Line-7" stroke="#36434D" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3.5,13.5 L9.5,13.5" id="Line-6" stroke="#36434D" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3.5,15.5 L11.5,15.5" id="Line-5" stroke="#36434D" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

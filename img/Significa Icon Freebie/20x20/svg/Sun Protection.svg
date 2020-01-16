@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Sun Protection</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="2" y="16" width="6" height="4"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="4" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M0,0 L10,0 L9.05882119,16.0000398 C9.02633514,16.5523026 8.54696369,17 8.00296986,17 L1.99703014,17 C1.4463856,17 0.973252416,16.5452911 0.941178812,16.0000398 L0,0 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="10" height="17" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Sun-Protection" stroke="#35424C">
+            <g id="Sun-Protection">
+                <g id="Icon">
+                    <path d="M8.9718476,12.4484323 L8.9718476,12.4484323 C9.56651173,12.7989318 10.2597749,13 11,13 C13.209139,13 15,11.209139 15,9 C15,6.790861 13.209139,5 11,5 C10.4295516,5 9.88699335,5.11941216 9.39595832,5.3346035" id="Line-111" stroke-linecap="square"></path>
+                    <use id="Line-110" mask="url(#mask-2)" stroke-width="2" stroke-linecap="square" xlink:href="#path-1"></use>
+                    <use id="Line-109" mask="url(#mask-4)" stroke-width="2" stroke-linecap="square" xlink:href="#path-3"></use>
+                    <path d="M1.5,2.5 L8.5,2.5" id="Line-108" stroke-linecap="square"></path>
+                    <path d="M3,6.5 L5.5,6.5" id="Line-107" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3,8.5 L6.5,8.5" id="Line-106" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3,10.5 L4.5,10.5" id="Line-105" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16.5,8.5 L17.5,8.5" id="Line-104" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.5,14.5 L10.5,15.5" id="Line-103" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14.5961941,3.90380592 L15.5961941,3.90380592" id="Line-102" stroke-linecap="round" stroke-linejoin="round" transform="translate(15.096194, 3.903806) rotate(-45.000000) translate(-15.096194, -3.903806) "></path>
+                    <path d="M15.0961941,12.5961941 L15.0961941,13.5961941" id="Line-101" stroke-linecap="round" stroke-linejoin="round" transform="translate(15.096194, 13.096194) rotate(-45.000000) translate(-15.096194, -13.096194) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

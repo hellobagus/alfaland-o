@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Trash</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="2" width="18" height="3" rx="1.5"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18" height="3" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M9,3 C10.1045695,3 11,3.1045695 11,2 C11,0.8954305 10.1045695,0 9,0 C7.8954305,0 7,0.8954305 7,2 C7,3.1045695 7.8954305,3 9,3 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="4" height="3.00265019" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Trash">
+            <g id="Trash">
+                <g id="Icon" transform="translate(1.000000, 0.000000)">
+                    <path d="M1.99899903,5 L2.85678541,17.0090093 C2.93532782,18.1086031 3.90102462,19 5.00769677,19 L12.9913023,19 C14.1006754,19 15.0640757,18.1029399 15.1422136,17.0090093 L16,5" id="Line-56" stroke="#36434D" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M6.5,8 L6.5,15" id="Line-55" stroke="#35424C" stroke-linecap="round"></path>
+                    <path d="M11.5,8 L11.5,15" id="Line-54" stroke="#35424C" stroke-linecap="round"></path>
+                    <use id="Line-53" stroke="#35424C" mask="url(#mask-2)" stroke-width="2" stroke-linecap="square" xlink:href="#path-1"></use>
+                    <use id="Line-52" stroke="#35424C" mask="url(#mask-4)" stroke-width="2" stroke-linecap="square" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

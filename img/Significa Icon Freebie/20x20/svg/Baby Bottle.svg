@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Baby Bottle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.9084972,10.898965 L8.61452911,18.6713683 C7.57225901,19.9584647 5.67923853,20.153133 4.39563802,19.1136938 L1.28756668,16.5968273 C-0.000192433838,15.5540205 -0.199413166,13.6655233 0.843069494,12.3781644 L7.13703763,4.60576108 L14.9084972,10.898965 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14.7336407" height="15.1755262" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="5.65208783" y="4.97521707" width="12" height="4" rx="1"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12" height="4" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Baby-Bottle" stroke="#36434D">
+            <g id="Baby-Bottle">
+                <g id="Icon" transform="translate(1.000000, 0.000000)">
+                    <use id="Line-236" mask="url(#mask-2)" stroke-width="2" stroke-linecap="square" xlink:href="#path-1"></use>
+                    <use id="Line-235" mask="url(#mask-4)" stroke-width="2" stroke-linecap="square" transform="translate(11.652088, 6.975217) rotate(-321.000000) translate(-11.652088, -6.975217) " xlink:href="#path-3"></use>
+                    <path d="M9.73921272,2.98135818 C10.7791921,1.69709064 12.4506704,1.22537815 13.9455618,1.65115398 C13.9942358,1.55788537 14.0528789,1.46806177 14.1216446,1.38314327 C14.6777471,0.696413892 15.6852614,0.590519873 16.3719908,1.14662236 C17.0587201,1.70272485 17.1646142,2.71023914 16.6085117,3.39696852 C16.539746,3.48188703 16.4640779,3.55792403 16.3829673,3.62492606 L16.3829673,3.62492606 C17.1102443,4.99862669 16.9963598,6.73165376 15.9563804,8.01592131" id="Line-234" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M6.02510673,10.3055393 L8.02510673,10.3055393" id="Line-233" stroke-linecap="round" stroke-linejoin="round" transform="translate(7.025107, 10.305539) rotate(-321.000000) translate(-7.025107, -10.305539) "></path>
+                    <path d="M4.76646595,11.8598312 L6.76646595,11.8598312" id="Line-232" stroke-linecap="round" stroke-linejoin="round" transform="translate(5.766466, 11.859831) rotate(-321.000000) translate(-5.766466, -11.859831) "></path>
+                    <path d="M3.50782517,13.4141231 L5.50782517,13.4141231" id="Line-231" stroke-linecap="round" stroke-linejoin="round" transform="translate(4.507825, 13.414123) rotate(-321.000000) translate(-4.507825, -13.414123) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

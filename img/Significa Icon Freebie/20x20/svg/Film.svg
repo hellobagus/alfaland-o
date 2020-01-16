@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Film</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M17.9225704,15.992269 C17.9225704,16.5485189 17.5242468,16.8098676 17.0170795,16.5684826 L12.1274287,14.2412664 L12.1274287,10.8049028 L17.0170795,8.49571274 C17.5171683,8.25954044 17.9225704,8.52327147 17.9225704,9.0752645 L17.9225704,15.992269 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5.7951417" height="8.24951324" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <circle id="path-3" cx="3.5" cy="2.5" r="2.5"></circle>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <circle id="path-5" cx="9.5" cy="2.5" r="2.5"></circle>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5" height="5" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Film" stroke="#36434D">
+            <g id="Film">
+                <g id="Icon" transform="translate(1.000000, 1.000000)">
+                    <path d="M11.0454545,18 L2.09090909,18 C1.21272727,18 0.5,17.2888636 0.5,16.4090909 L0.5,8.45454545 C0.5,7.57477273 1.21272727,6.86363636 2.09090909,6.86363636 L11.0454545,6.86363636 C11.9236364,6.86363636 12.6363636,7.57477273 12.6363636,8.45454545 L12.6363636,16.4090909 C12.6363636,17.2888636 11.9236364,18 11.0454545,18 Z" id="Line-85" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <use id="Line-84" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                    <use id="Line-83" mask="url(#mask-4)" stroke-width="2" xlink:href="#path-3"></use>
+                    <use id="Line-82" mask="url(#mask-6)" stroke-width="2" xlink:href="#path-5"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

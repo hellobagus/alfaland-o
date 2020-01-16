@@ -1,0 +1,68 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+project './AlfalandOffice.xcodeproj'
+target 'AlfalandOffice' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for AlfalandOffice
+  platform :ios, '9.0'
+
+  react_native_path = "../node_modules/react-native"
+  pod 'React', :path => "#{react_native_path}", :subspecs => [
+    'Core',
+    'CxxBridge',
+    'DevSupport',
+    'RCTText',
+    'RCTNetwork',
+    'RCTImage',
+    'RCTWebSocket',
+  ]
+  # pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+  pod 'RNImageCropPicker', :path => '../node_modules/react-native-image-crop-picker'
+  pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+  pod 'react-native-netinfo', :path => '../node_modules/@react-native-community/netinfo'
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
+  # Third party deps podspec link
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+  pod "yoga", :path => "#{react_native_path}/ReactCommon/yoga"
+  pod 'Folly', :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
+
+
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
+  pod 'react-native-date-picker', :path => '../node_modules/react-native-date-picker'
+
+  target 'AlfalandOfficeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'AlfalandOffice-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for AlfalandOffice-tvOS
+
+  target 'AlfalandOffice-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == "React"
+      target.remove_from_project
+    end
+  end
+end

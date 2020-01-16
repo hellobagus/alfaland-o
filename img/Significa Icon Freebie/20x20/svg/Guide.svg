@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Guide</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7,12.5 C14,12.5 15.6392701,15.538979 15.6392701,15.538979 C16.4309931,16.3067369 17,16.104522 17,14.9998938 L17,10.2324356 L17,10.2324356 C17.5978014,9.88662619 18,9.24028236 18,8.5 C18,7.75971764 17.5978014,7.11337381 17,6.76756439 L17,2.00010618 C17,0.890058413 16.3971384,0.648559562 15.6534709,1.44859833 C15.6534709,1.44859833 14,4.5 7,4.5" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="11" height="15.0216355" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Guide" stroke="#35424C">
+            <g id="Guide">
+                <g id="Icon" transform="translate(1.000000, 0.000000)">
+                    <use id="Line-212" mask="url(#mask-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-1"></use>
+                    <path d="M7.5,5 L7.5,17.5073128 C7.5,18.0555588 7.05613518,18.5 6.5,18.5 L6.5,18.5 C5.94771525,18.5 5.5,18.0532287 5.5,17.4986199 L5.5,14.0032523 C5.5,12.8968866 4.6061002,12 3.4951185,12 L2.5048815,12 C1.39761602,12 0.5,11.1134452 0.5,9.99408095 L0.5,7.00591905 C0.5,5.89808055 1.38655484,5 2.50591905,5 L7.5,5 Z" id="Line-211" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

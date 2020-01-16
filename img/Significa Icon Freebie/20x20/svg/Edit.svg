@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Edit</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.894826,1.56964005 C13.6727052,0.79176089 14.9353835,0.793247844 15.7209662,1.57883054 L16.4211695,2.27903384 C17.2041244,3.06198876 17.2071075,4.32842645 16.4303599,5.10517396 L7.23223305,14.3033009 L2.8770561,15.7550265 C2.35342172,15.9295713 2.0676459,15.6549267 2.24497349,15.1229439 L3.69669914,10.767767 L12.894826,1.56964005 L12.894826,1.56964005 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14.8183168" height="14.819467" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Edit">
+            <g id="Edit">
+                <g id="Icon" transform="translate(2.000000, 0.000000)">
+                    <path d="M0,18.5 L16,18.5" id="Line-42" stroke="#36434D" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <use id="Line-41" stroke="#35424C" mask="url(#mask-2)" stroke-width="2" stroke-linecap="square" xlink:href="#path-1"></use>
+                    <path d="M11.8890873,5.1109127 L13.8890873,5.1109127" id="Line-40" stroke="#35424C" stroke-linecap="square" transform="translate(12.889087, 5.110913) rotate(-315.000000) translate(-12.889087, -5.110913) "></path>
+                    <path d="M4.81801948,12.1819805 L6.81801948,12.1819805" id="Line-39" stroke="#35424C" stroke-linecap="square" transform="translate(5.818019, 12.181981) rotate(-315.000000) translate(-5.818019, -12.181981) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

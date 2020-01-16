@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Plus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="20x20/Plus" stroke="#36434D">
+            <g id="Plus">
+                <g id="Icon" transform="translate(2.000000, 2.000000)">
+                    <path d="M0,8 L16,8" id="Line-4"></path>
+                    <path d="M8,0 L8,16" id="Line-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

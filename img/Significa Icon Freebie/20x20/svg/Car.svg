@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Car</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6,15.5 L6,16.5024408 C6,17.3295199 5.33420277,18 4.5,18 L4.5,18 C3.67157288,18 3,17.3300459 3,16.5024408 L3,15.5 L3,15.5" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3" height="2.5" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M17,15.5 L17,16.5024408 C17,17.3295199 16.3342028,18 15.5,18 L15.5,18 C14.6715729,18 14,17.3300459 14,16.5024408 L14,15.5 L14,15.5" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3" height="2.5" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <path d="M1,11.0016655 C1,9.34389141 2.35292554,8 3.99253976,8 L16.0074602,8 C17.6601943,8 19,9.33902013 19,11.0016655 L19,15.0029699 C19,15.5536144 18.5550537,16 18.0066023,16 L1.99339768,16 C1.44475929,16 1,15.5469637 1,15.0029699 L1,11.0016655 Z" id="path-5"></path>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18" height="8" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <path d="M3.57590997,4.96863019 C3.81012843,3.32910101 5.34162278,2 6.99715203,2 L13.002848,2 C14.6581293,2 16.1904462,3.33312307 16.42409,4.96863019 L17,9 L3,9 L3.57590997,4.96863019 Z" id="path-7"></path>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14" height="7" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <rect id="path-9" x="3" y="10.5" width="3" height="3" rx="1.5"></rect>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3" height="3" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <rect id="path-11" x="14" y="10.5" width="3" height="3" rx="1.5"></rect>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3" height="3" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+    </defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Car" stroke="#35424C">
+            <g id="Car">
+                <g id="Icon" transform="translate(0.000000, 1.000000)">
+                    <use id="Line-193" mask="url(#mask-2)" stroke-width="2" stroke-linecap="square" xlink:href="#path-1"></use>
+                    <use id="Line-192" mask="url(#mask-4)" stroke-width="2" stroke-linecap="square" xlink:href="#path-3"></use>
+                    <use id="Line-191" mask="url(#mask-6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-5"></use>
+                    <path d="M1.5,6.5 L1.5,7.5" id="Line-190" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M8.88528276,2.50369591 L11.4868498,0.428954246" id="Line-189" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <use id="Line-188" mask="url(#mask-8)" stroke-width="2" stroke-linecap="square" xlink:href="#path-7"></use>
+                    <path d="M18.5,6.5 L18.5,7.5" id="Line-187" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <use id="Line-186" mask="url(#mask-10)" stroke-width="2" stroke-linecap="square" xlink:href="#path-9"></use>
+                    <use id="Line-185" mask="url(#mask-12)" stroke-width="2" stroke-linecap="square" xlink:href="#path-11"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

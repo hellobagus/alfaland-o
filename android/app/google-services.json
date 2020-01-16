@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "554650484915",
+    "firebase_url": "https://alfaland-o-plus.firebaseio.com",
+    "project_id": "alfaland-o-plus",
+    "storage_bucket": "alfaland-o-plus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554650484915:android:1db673e6f54683014a70c6",
+        "android_client_info": {
+          "package_name": "com.ifcasoftware.alfaland"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554650484915-ncu3gm8k408st9on96m8mah9ba6ahtjj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ifcasoftware.alfaland",
+            "certificate_hash": "02fbe38d279b9d964422f3221b2c8ce8b7c361f0"
+          }
+        },
+        {
+          "client_id": "554650484915-snvblnmthu3fh2s0he9ih9cm09q7cne0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHooApGh4tspvco6u66k3iFyH9CTA0Da4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554650484915-snvblnmthu3fh2s0he9ih9cm09q7cne0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

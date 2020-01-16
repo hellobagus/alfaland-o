@@ -1,0 +1,81 @@
+{
+  "name": "IFCAOPlus",
+  "version": "0.0.7",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "build-android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
+    "build-android-release": "cd ./android && ./gradlew clean && ./gradlew app:assembleRelease",
+    "bundle-release": "cd ./android && ./gradlew clean && ./gradlew bundleRelease",
+    "clean-android": "cd ./android && ./gradlew clean",
+    "android": "npx jetify && react-native run-android",
+    "ios": "open ios/AlfalandOffice.xcworkspace",
+    "clean": "rm -rf ./node_modules/ && yarn",
+    "clean-ios": "cd ./ios && rm -rf ./Pods/ && pod install"
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.6.2",
+    "@react-native-community/netinfo": "^3.2.1",
+    "axios": "^0.18.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "moment": "^2.24.0",
+    "native-base": "^2.10.0",
+    "prop-types": "^15.6.2",
+    "react": "16.8.6",
+    "react-native": "^0.59.0",
+    "react-native-communications": "^2.2.1",
+    "react-native-date-picker": "^2.7.0",
+    "react-native-device-info": "^0.26.1",
+    "react-native-dotenv": "^0.2.0",
+    "react-native-elements": "^0.19.1",
+    "react-native-email": "^1.0.2",
+    "react-native-firebase": "^4.2.0",
+    "react-native-gesture-handler": "1.2.1",
+    "react-native-gifted-chat": "^0.7.0",
+    "react-native-image-crop-picker": "^0.22.0",
+    "react-native-image-view": "^2.1.2",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-livechat": "^1.1.1",
+    "react-native-loading-spinner-overlay": "^1.0.1",
+    "react-native-modal": "^7.0.2",
+    "react-native-modal-datetime-picker": "^6.0.0",
+    "react-native-modal-selector": "^1.0.1",
+    "react-native-modalbox": "^2.0.0",
+    "react-native-modalize": "^1.2.3",
+    "react-native-navigation": "^2.5.1",
+    "react-native-phone-call": "^1.0.9",
+    "react-native-picker-module": "^0.1.2",
+    "react-native-render-html": "^4.1.2",
+    "react-native-segmented-control-tab": "^3.3.1",
+    "react-native-snap-carousel": "^3.8.2",
+    "react-native-star-rating": "^1.1.0",
+    "react-native-star-view": "^1.1.3",
+    "react-native-super-grid": "^3.0.0",
+    "react-native-swipe-list-view": "^1.5.3",
+    "react-native-swipeout": "^2.3.6",
+    "react-native-table-component": "^1.2.0",
+    "react-native-vector-icons": "^6.1.0",
+    "redux": "^4.0.1",
+    "rn-fetch-blob": "0.10.15",
+    "scheduler": "^0.15.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "babel-preset-react-native": "^5",
+    "jest": "23.6.0",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ]
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  }
+}

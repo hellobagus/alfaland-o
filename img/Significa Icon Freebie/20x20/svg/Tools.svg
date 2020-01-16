@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Tools</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="2.90380592" y="11.5961941" width="4" height="7" rx="2"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="4" height="7" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="15.6568542" y="0.843145751" width="3" height="4"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3" height="4" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <path d="M10.6280317,2.68346446 L13.6280317,2.68346446 L13.6280317,18.8175412 C13.6280317,19.6480643 12.9622344,20.3213362 12.1280317,20.3213362 L12.1280317,20.3213362 C11.2996045,20.3213362 10.6280317,19.6514484 10.6280317,18.8175412 L10.6280317,2.68346446 Z" id="path-5"></path>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3" height="17.6378718" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <path d="M1.21373159,6.99591229 C0.819548518,6.60172922 0.81146246,5.95473848 1.18545822,5.56155465 L5.31454175,1.22062609 C5.69310987,0.82263531 6.45008805,0.500000043 7.00878473,0.50000005 L10.4912151,0.50000009 C11.0483516,0.500000096 11.1896429,0.827031668 10.8173513,1.21932546 L4.01107575,8.39128247 C3.63405932,8.78855489 3.01492909,8.79710979 2.61469553,8.39687624 L1.21373159,6.99591229 L1.21373159,6.99591229 Z" id="path-7"></path>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="10.1133003" height="8.19316758" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+    </defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Tools" stroke="#35424C">
+            <g id="Tools">
+                <g id="Icon" transform="translate(0.000000, 1.000000)">
+                    <use id="Line-22" mask="url(#mask-2)" stroke-width="2" stroke-linecap="square" transform="translate(4.903806, 15.096194) rotate(-315.000000) translate(-4.903806, -15.096194) " xlink:href="#path-1"></use>
+                    <path d="M8.22393295,13.4714357 L8.22393295,10.0806984" id="Line-21" stroke-linecap="round" stroke-linejoin="round" transform="translate(8.223933, 11.776067) rotate(-315.000000) translate(-8.223933, -11.776067) "></path>
+                    <path d="M13.3956282,9.92354873 L13.3956282,3.2851949" id="Line-20" stroke-linecap="round" stroke-linejoin="round" transform="translate(13.395628, 6.604372) rotate(-315.000000) translate(-13.395628, -6.604372) "></path>
+                    <path d="M4.1109127,14.3890873 L7.1109127,14.3890873" id="Line-19" stroke-linecap="square" transform="translate(5.610913, 14.389087) rotate(-315.000000) translate(-5.610913, -14.389087) "></path>
+                    <use id="Line-18" mask="url(#mask-4)" stroke-width="2" stroke-linecap="square" transform="translate(17.156854, 2.843146) rotate(-315.000000) translate(-17.156854, -2.843146) " xlink:href="#path-3"></use>
+                    <use id="Line-17" mask="url(#mask-6)" stroke-width="2" stroke-linecap="square" transform="translate(12.128032, 11.502400) rotate(-45.000000) translate(-12.128032, -11.502400) " xlink:href="#path-5"></use>
+                    <use id="Line-16" mask="url(#mask-8)" stroke-width="2" stroke-linecap="square" xlink:href="#path-7"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

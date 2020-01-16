@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Kid</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="2.5" cy="1.5" r="1.5"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3" height="3" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Kid" stroke="#35424C">
+            <g id="Kid">
+                <g id="Icon" transform="translate(1.000000, 0.000000)">
+                    <path d="M15.0984157,13.1298302 C14.3321672,16.2827072 12.3358206,19.0952381 8,19.0952381 C2.03909638,19.0952381 0.5,13.7793124 0.5,9.57142857 C0.5,5.36354476 2.42084358,1 8,1 C12.244002,1 14.3711304,3.52495428 15.1461683,6.58564092 C15.1461683,6.58564092 14.5910049,9.87108091 8.95875649,10.7108286 C3.32650805,11.5505762 0.5,10.0476189 0.5,10.0476189" id="Line-230" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <use id="Line-229" mask="url(#mask-2)" stroke-width="2" stroke-linecap="square" xlink:href="#path-1"></use>
+                    <path d="M15.2709121,6.90323452 C15.2709121,6.90323452 19.5103137,8.84991096 16.2796914,12.08258 C11.4953053,16.8699971 4.3498743,11.8632236 2.54397098,10.8483289" id="Line-228" stroke-linecap="square"></path>
+                    <path d="M7.5,17 L8.5,17" id="Line-227" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>20x20/Wine</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="20x20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20x20/Wine">
+            <g id="Wine">
+                <g id="Icon" transform="translate(1.000000, 1.000000)">
+                    <path d="M0.5,17.5 L7.5,17.5" id="Line-210" stroke="#35424C" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4,12.5 L4,16.5498753" id="Line-209" stroke="#35424C" stroke-linecap="square"></path>
+                    <path d="M0.952762333,4.14670972e-16 C0.709518891,0.654796408 -0.342123825,3.77494214 0.112848795,7.62878667 C0.281158317,9.05299804 0.857285781,10.141991 1.82559077,10.865185 C2.58870288,11.4350096 3.42441451,11.6374013 3.90786669,11.6374013 L4.09181663,11.6374013 C4.95367343,11.6374013 7.50049297,10.9009012 7.88706797,7.62878667 C8.34227402,3.77494214 7.29039787,0.654796408 7.04715443,0 L0.952762333,0 L0.952762333,4.14670972e-16 Z" id="Line-208" stroke="#35424C"></path>
+                    <path d="M8,6.54719466 C8,6.54719466 5.79785576,5.11899353 4,6.54719466 C2.20214424,7.97539579 0,6.54719466 0,6.54719466" id="Line-207" stroke="#36434D" stroke-linecap="round" stroke-linejoin="round" transform="translate(4.000000, 6.547195) scale(-1, 1) translate(-4.000000, -6.547195) "></path>
+                    <path d="M10.5,17.5 L17.5,17.5" id="Line-206" stroke="#35424C" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14,12.5 L14,16.5498753" id="Line-205" stroke="#35424C" stroke-linecap="square"></path>
+                    <path d="M10.9527623,0 C10.7095189,0.654796408 9.65787617,3.77494214 10.1128488,7.62878667 C10.2811583,9.05299804 10.8572858,10.141991 11.8255908,10.865185 C12.5887029,11.4350096 13.4244145,11.6374013 13.9078667,11.6374013 L14.0918166,11.6374013 C14.9536734,11.6374013 17.500493,10.9009012 17.887068,7.62878667 C18.342274,3.77494214 17.2903979,0.654796408 17.0471544,0 L10.9527623,0 L10.9527623,0 Z" id="Line-204" stroke="#35424C"></path>
+                    <path d="M18,6.54719466 C18,6.54719466 15.7978558,5.11899353 14,6.54719466 C12.2021442,7.97539579 10,6.54719466 10,6.54719466" id="Line-203" stroke="#36434D" stroke-linecap="round" stroke-linejoin="round" transform="translate(14.000000, 6.547195) scale(-1, 1) translate(-14.000000, -6.547195) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
