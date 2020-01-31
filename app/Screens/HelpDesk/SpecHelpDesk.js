@@ -64,6 +64,7 @@ class SpecHelpDesk extends Component {
 
             textUsername: "",
             textDebtor: "",
+            textId: "",
             textLot: "",
             textContact: "",
             textAppType: "",
@@ -193,7 +194,7 @@ class SpecHelpDesk extends Component {
     };
 
     getSeqNo = () => {
-        const dT = this.state.dataTower[0];
+        const dT = this.state.dataTower[0]; 
 
         const formData = {
             entity: dT.entity_cd,
@@ -404,22 +405,58 @@ class SpecHelpDesk extends Component {
         console.log("Selected index", this.state.selectedIndex);
     };
 
-    handleNavigation = () => {
-        this.setState({ isDisabled: true }, () => {
-            const isValid = this.validating({
-                textContact: { require: true },
-                email: {require: true},
-                hp: { require: true},
-                code: { require: true}
-              
-            })
-            if (isValid && this.state.appType == "") {
-                this.goToScreen("screen.CategoryHelp");
-            } else {
-                this.goToScreen("screen.SubmitHelpDesk");
+    validating = validationData => {
+        const keys = Object.keys(validationData);
+        const errorKey = [];
+        let isValid = false;
+
+        keys.map((data, key) => {
+            if (validationData[data].require) {
+                let isError =
+                    !this.state[data] || this.state[data].length == 0
+                        ? true
+                        : false;
+                let error = "error" + data;
+                errorKey.push(isError);
+                this.setState({ [error]: isError });
             }
         });
+
+        for (var i = 0; i < errorKey.length; i++) {
+            if (errorKey[i]) {
+                isValid = false;
+                break;
+            }
+            isValid = true;
+        }
+
+        return isValid;
     };
+
+    handleNavigation = () => {
+        const isValid = this.validating({
+            textUsername: { require: true },
+            dataDebtor: {require:true},
+            dataLot: {require:true},
+            textContact: {require:true}
+            
+        });
+        console.log('valid',isValid)
+        this.setState({ isDisabled: true }, () => {
+            if ( isValid ){
+                if (this.state.appType == "") {
+                    this.goToScreen("screen.CategoryHelp");
+                } else {
+                    this.goToScreen("screen.SubmitHelpDesk");
+                }
+
+            }else{
+                alert('Fill the blank input');
+            }
+           
+        });
+    };
+
 
     goToScreen = screenName => {
         Navigation.push(this.props.componentId, {
@@ -481,41 +518,96 @@ class SpecHelpDesk extends Component {
                             {/* SELECTED TAB COMPLAIN */}
                             {this.state.selectedIndex === 0 && (
                                 <View style={nbStyles.subWrap}>
-                                    <DropdownInput
-                                        label="Debtor"
-                                        data={this.state.dataDebtor}
-                                        onChange={this.handleChangeModal}
-                                        value={this.state.textDebtor}
-                                    />
+                                    <View style={{flexDirection: 'column'}}>
+                                        <DropdownInput
+                                            label="Debtor"
+                                            data={this.state.dataDebtor}
+                                            onChange={this.handleChangeModal}
+                                            value={this.state.debtor+'  '+this.state.textDebtor}
+                                        />
+                                        {/* {this.state.errordataDebtor ? (<Text                                 
+                                        style={{                                     
+                                            position: "absolute",                                     
+                                            bottom:0,                                     
+                                            left: 15,                                     
+                                            color: "red",                                     
+                                            fontSize: 12                                 
+                                            }}                             
+                                            >                                 
+                                            Debtor Required                             
+                                            </Text>) : null} */}
+                                    </View>
+                                    
+                                    <View style={{flexDirection:'column'}}>
+                                        <NormalInput
+                                            label="Name"
+                                            // value={this.state.textUsername}
+                                            // onChangeText={text =>
+                                            //     this.setState({
+                                            //         textUsername: text
+                                            //     })
+                                            // }
+                                            // underlineColorAndroid="transparent"
 
-                                    <NormalInput
-                                        label="Name"
-                                        // value={this.state.textUsername}
-                                        onChangeText={text =>
-                                            this.setState({
-                                                textUsername: text
-                                            })
-                                        }
-                                    />
+                                        />
+                                        {this.state.errortextUsername ? (<Text                                 
+                                        style={{                                     
+                                            position: "absolute",                                     
+                                            bottom:0,                                     
+                                            left: 15,                                     
+                                            color: "red",                                     
+                                            fontSize: 12                                 
+                                            }}                             
+                                            >                                 
+                                            Full Name Required                             
+                                            </Text>) : null}
+                                    </View>
 
-                                    <DropdownInput
-                                        label="Lot No"
-                                        data={this.state.dataLot}
-                                        onChange={option =>
-                                            this.handleLotChange(option.lot_no)
-                                        }
-                                        value={this.state.textLot}
-                                    />
-
-                                    <NormalInput
-                                        label="Contact No"
-                                        value={this.state.textContact}
-                                        onChangeText={text =>
-                                            this.setState({
-                                                textContact: text
-                                            })
-                                        }
-                                    />
+                                    <View style={{flexDirection:'column'}}>
+                                        <DropdownInput
+                                            label="Lot No"
+                                            data={this.state.dataLot}
+                                            onChange={option =>
+                                                this.handleLotChange(option.lot_no)
+                                            }
+                                            value={this.state.textLot}
+                                        />
+                                         {/* {this.state.errordataLot ? (<Text                                 
+                                            style={{                                     
+                                            position: "absolute",                                     
+                                            bottom:0,                                     
+                                            left: 15,                                     
+                                            color: "red",                                     
+                                            fontSize: 12                                 
+                                            }}                             
+                                            >                                 
+                                            Lot No Required                             
+                                            </Text>) : null} */}
+                                    </View>
+                                    
+                                    <View style={{flexDirection:'column'}}>
+                                        <NormalInput
+                                            label="Contact No"
+                                            value={this.state.textContact}
+                                            onChangeText={text =>
+                                                this.setState({
+                                                    textContact: text
+                                                })
+                                            }
+                                        />
+                                        {/* {this.state.errortextContact ? (<Text                                 
+                                        style={{                                     
+                                            position: "absolute",                                     
+                                            bottom:0,                                     
+                                            left: 15,                                     
+                                            color: "red",                                     
+                                            fontSize: 12                                 
+                                            }}                             
+                                            >                                 
+                                            Contact No Required                             
+                                            </Text>) : null} */}
+                                    </View>
+                                    
                                 </View>
                             )}
                             {/* END TAB COMPLAIN */}
@@ -523,41 +615,110 @@ class SpecHelpDesk extends Component {
                             {/* SELECTED TAB REQUEST */}
                             {this.state.selectedIndex === 1 && (
                                 <View style={nbStyles.subWrap}>
-                                    <DropdownInput
-                                        label="Debtor"
-                                        data={this.state.dataDebtor}
-                                        onChange={this.handleChangeModal}
-                                        value={this.state.textDebtor}
-                                    />
+                                    <View style={{flexDirection: 'column'}}>
+                                        <DropdownInput
+                                                label="Debtor"
+                                                data={this.state.dataDebtor}
+                                                onChange={this.handleChangeModal}
+                                                value={this.state.debtor+' - '+this.state.textDebtor}
+                                                />
+                                            {/* {this.state.errordataDebtor ? (<Text
+                                                    style={{
+                                                        // marginTop: 1,
+                                                        // paddingTop: 0,
+                                                        // top:55,
+                                                        position: "absolute",
+                                                        // // paddingTop: 5,
+                                                        // // paddingBottom: 5,
+                                                        // top: 50,
+                                                        bottom:0,
+                                                        left: 10,
+                                                        color: "red",
+                                                        fontSize: 12
+                                                    }}
+                                                >
+                                                Debtor Required
+                                            </Text>) : null} */}
+                                    </View>
+                                    <View style={{flexDirection: 'column'}}>
+                                        <NormalInput
+                                                label="Name"
+                                                value={this.state.textUsername}
+                                                onChangeText={text =>
+                                                    this.setState({
+                                                        textUsername: text
+                                                    })
+                                                }
+                                            />
+                                            {/* {this.state.errortextUsername ? (<Text
+                                                    style={{
+                                                        // top:55,
+                                                        position: "absolute",
+                                                        // paddingTop: 5,
+                                                        // paddingBottom: 5,
+                                                        // top: 50,
+                                                        bottom:0,
+                                                        left: 10,
+                                                        color: "red",
+                                                        fontSize: 12
+                                                    }}
+                                                >
+                                                User Name Required
+                                            </Text>) : null} */}
+                                    </View>
 
-                                    <NormalInput
-                                        label="Username"
-                                        value={this.state.textUsername}
-                                        onChangeText={text =>
-                                            this.setState({
-                                                textUsername: text
-                                            })
-                                        }
-                                    />
+                                    <View style={{flexDirection: 'column'}}>
+                                        <DropdownInput
+                                                label="Lot No"
+                                                data={this.state.dataLot}
+                                                onChange={option =>
+                                                    this.handleLotChange(option.lot_no)
+                                                }
+                                                value={this.state.textLot}
+                                            />
+                                            {/* {this.state.errordataLot ? (<Text
+                                                    style={{
+                                                        position: "absolute",
+                                                        // paddingTop: 5,
+                                                        // paddingBottom: 5,
+                                                        // top: 10,
+                                                        bottom:0,
+                                                        left: 10,
+                                                        color: "red",
+                                                        fontSize: 12
+                                                    }}
+                                                >
+                                                Lot No Required
+                                            </Text>) : null} */}
+                                    </View>
 
-                                    <DropdownInput
-                                        label="Lot No"
-                                        data={this.state.dataLot}
-                                        onChange={option =>
-                                            this.handleLotChange(option.lot_no)
-                                        }
-                                        value={this.state.textLot}
-                                    />
-                                    <NormalInput
-                                        label="Contact No"
-                                        value={this.state.textContact}
-                                        keyboardType="number-pad"
-                                        onChangeText={text =>
-                                            this.setState({
-                                                textContact: text
-                                            })
-                                        }
-                                    />
+                                    <View style={{flexDirection: 'column'}}>
+                                        <NormalInput
+                                                label="Contact No"
+                                                value={this.state.textContact}
+                                                keyboardType="number-pad"
+                                                onChangeText={text =>
+                                                    this.setState({
+                                                        textContact: text
+                                                    })
+                                                }
+                                            />
+                                            {/* {this.state.errortextContact ? (<Text
+                                                    style={{
+                                                        position: "absolute",
+                                                        // paddingTop: 5,
+                                                        // paddingBottom: 5,
+                                                        // top: 10,
+                                                        bottom:0,
+                                                        left: 10,
+                                                        color: "red",
+                                                        fontSize: 12
+                                                    }}
+                                                >
+                                                Contact No Required
+                                            </Text>) : null} */}
+
+                                    </View> 
                                 </View>
                             )}
                             {/* END TAB REQUEST */}
@@ -565,16 +726,36 @@ class SpecHelpDesk extends Component {
                             {/* SELECTED TAB APPLICATION */}
                             {this.state.selectedIndex === 2 && (
                                 <View style={nbStyles.subWrap}>
+                                <View style={{flexDirection:'column'}}>
                                     <DropdownInput
-                                        label="Application Type"
-                                        data={this.state.dataApplicationType}
-                                        onChange={
-                                            this.handleChangeApplicationType
-                                        }
-                                        value={this.state.textAppType}
-                                    />
+                                            label="Application Type"
+                                            data={this.state.dataApplicationType}
+                                            onChange={
+                                                this.handleChangeApplicationType
+                                            }
+                                            value={this.state.textAppType}
+                                        />
+                                        {/* {this.state.errordataDebtor ? (<Text
+                                                style={{
+                                                    // marginTop: 1,
+                                                    // paddingTop: 0,
+                                                    // top:55,
+                                                    position: "absolute",
+                                                    // // paddingTop: 5,
+                                                    // // paddingBottom: 5,
+                                                    // top: 50,
+                                                    bottom:0,
+                                                    left: 10,
+                                                    color: "red",
+                                                    fontSize: 12
+                                                }}
+                                            >
+                                            Debtor Required
+                                        </Text>) : null} */}
+                                </View>
+                                    
                                     <NormalInput
-                                        label="Username"
+                                        label="Name"
                                         value={this.state.textUsername}
                                         onChangeText={text =>
                                             this.setState({
@@ -606,18 +787,8 @@ class SpecHelpDesk extends Component {
                                             })
                                         }
                                     />
-                                     {this.state.errortextContact ? (<Text
-                                style={{
-                                    position: "absolute",
-                                    bottom:10,
-                                    left: 15,
-                                    color: "red",
-                                    fontSize: 12
-                                }}
-                            >
-                                Full Name Required
-                            </Text>) : null}
-                                    
+                                   
+                                     
                                     
 
                                 </View>
@@ -632,7 +803,7 @@ class SpecHelpDesk extends Component {
                                 block
                                 style={Style.buttonSubmit}
                                 onPress={() => this.handleNavigation()}
-                                disabled={this.state.isDisabled}
+                                // disabled={this.state.isDisabled}
                             >
                                 <Text>Next</Text>
                             </Button>

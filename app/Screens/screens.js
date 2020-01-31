@@ -35,6 +35,8 @@ import Metrix from './Metrix'
 //Overtime 
 import Overtime from './Overtime'
 import AddOvertime from './Overtime/AddOvertime'
+import AddOvertime2 from './Overtime/AddOvertime2'
+
 
 //History
 import Status from './Status'
@@ -103,6 +105,8 @@ export function registerScreen(){
     //Overtime
     Navigation.registerComponent('screen.Overtime',()=> gestureHandlerRootHOC(Overtime));
     Navigation.registerComponent('screen.AddOvertime',()=> gestureHandlerRootHOC(AddOvertime));
+    Navigation.registerComponent('screen.AddOvertime2',()=> gestureHandlerRootHOC(AddOvertime2));
+
 
     //History
     Navigation.registerComponent('tab.Status',()=> gestureHandlerRootHOC(Status));

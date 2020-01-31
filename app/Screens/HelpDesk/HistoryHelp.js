@@ -171,7 +171,7 @@ class HistoryHelp extends Component {
                         <View style={nbStyles.subWrap2}>
 
                             <SegmentedControlTab
-                                values={['Ticket', 'Application']}
+                                values={['Ticket']}
                                 selectedIndex={this.state.selectedIndex}
                                 onTabPress={this.handleIndexChange}
                                 activeTabStyle={nbStyles.activeTabStyle}

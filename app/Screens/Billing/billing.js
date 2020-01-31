@@ -48,6 +48,7 @@ class Billing extends Component {
             debtor: "",
             dataTower: [],
             name: "",
+            type:"",
             totalInv: 0,
 
             isLoad: true
@@ -85,7 +86,7 @@ class Billing extends Component {
             name: this.state.name,
             date_start: this.state.startDate,
             date_end: this.state.endDate,
-            type: type,
+            type: this.state.type,
             email: this.state.email
         };
 

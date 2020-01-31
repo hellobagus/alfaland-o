@@ -16,12 +16,12 @@ import {
 } from 'native-base'
 import nbStyles from './Style'
 import ModalSelector from 'react-native-modal-selector'
-import Title from "@Component/Title";
+
 import Style from '@Theme/Style'
 import SegmentedControlTab from 'react-native-segmented-control-tab'
 import {Navigation} from 'react-native-navigation';
 import OfflineNotice from '@Component/OfflineNotice';
-import { DropdownInput, DateInput } from '../../components/Input';
+
 import {_storeData,_getData} from '@Component/StoreAsync';
 import {urlApi} from '@Config';
 
@@ -56,8 +56,8 @@ class SoaSearch extends Component {
 
             textDebtor : '',
             textProject : '',
-            startDate : new Date(),
-            endDate : new Date()
+            startDate : new Date(2018,10,10),
+            endDate : new Date(2019, 2, 1)
          };
     }
 
@@ -102,16 +102,11 @@ class SoaSearch extends Component {
         })
     }
 
-    handleDateChange = (name, time) => {
-        this.setState({ [name]: time });
-    };
-
     handleChangeModal = (data) => {
         console.log('dataDeb', data)
         this.setState({
-            debtor : data.debtor_acct,
-            textDebtor:data.name,
-
+            debtor : data,
+            textDebtor:data.name
         })
     }
 
@@ -143,45 +138,90 @@ class SoaSearch extends Component {
                 <OfflineNotice/>
                 <Content>
                     <View style={nbStyles.wrap}>
-                        <Title text="Statement of Account" />
+                        <View style={nbStyles.subWrap}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+
+                                <Text style={nbStyles.title}>Statement of Account</Text>
+                            </View>
+                        </View>
                         <Text style={{ fontSize: 12, marginLeft: 12, marginTop: 16 }}>
                             Date: {this.state.chosenDate.toString().substr(4, 12)}
                         </Text>
                         <View style={nbStyles.subWrap}>
-                            <DropdownInput
-                                label="Project"
-                                data={this.state.dataTower}
-                                onChange={this.handleChangeProject}
-                                value={this.state.selProject.project_descs}
-                            />
+                            <View>
+                                <ModalSelector
+                                    data={this.state.dataTower}
+                                    accessible={true}
+                                    keyExtractor= {item => item.project_no}
+                                    labelExtractor= {item => item.project_descs}
+                                    optionTextStyle={{color:"#333"}}
+                                    selectedItemTextStyle={{color:'#3C85F1'}}
+                                    def
+                                    // scrollViewAccessibilityLabel={'Scrollable options'}
+                                    cancelButtonAccessibilityLabel={'Cancel Button'}
+                                    onChange={(option)=>{ this.handleChangeProject(option)}}>
+                                    <TextInput style={styles.input} onFocus={() => this.selector.open()} 
+                                        placeholder="Project"
+                                        editable={false}
+                                        placeholderTextColor='#a9a9a9'
+                                        value={this.state.selProject.project_descs}
+                                    />
+                                </ModalSelector>
+                            </View>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <DateInput
-                                mode="date"
-                                name="startDate"
-                                label="Start Date"
-                                format="DD MMMM YYYY"
-                                min={new Date(2016,1,1)}
-                                onChange={this.handleDateChange}
-                                value={this.state.startDate}
-                            />
-                            <DateInput
-                                mode="date"
-                                name="endDate"
-                                label="End Date"
-                                format="DD MMMM YYYY"
-                                min={new Date(2016,1,1)}
-                                onChange={this.handleDateChange}
-                                value={this.state.endDate}
-                            />
+                            <View style={[styles.input,{marginBottom : 0}]}>
+                                <DatePicker
+                                    locale={"id"}
+                                    timeZoneOffsetInMinutes={undefined}
+                                    modalTransparent={true}
+                                    animationType={"fade"}
+                                    androidMode={"default"}
+                                    placeHolderText="Select date"
+                                    textStyle={{ color: "green" }}
+                                    placeHolderTextStyle={{ color: "#d3d3d3" }}
+                                    onDateChange={(val)=>this.setState({startDate : val})}
+                                    disabled={false}
+                                />
+                                
+                            </View>
+                            <View style={[styles.input,{marginBottom : 0}]}>
+                                <DatePicker
+                                    defaultDate={new Date()}
+                                    locale={"id"}
+                                    timeZoneOffsetInMinutes={undefined}
+                                    animationType={"fade"}
+                                    androidMode={"default"}
+                                    placeHolderText="Select date"
+                                    textStyle={{ color: "green" }}
+                                    placeHolderTextStyle={{ color: "#d3d3d3" }}
+                                    onDateChange={(val)=>this.setState({endDate : val})}
+                                    disabled={false}
+                                />
+                            </View>
                         </View>
                         <View style={nbStyles.subWrap}>
-                            <DropdownInput
-                                label="Debtor"
-                                data={this.state.dataDebtor}
-                                onChange={this.handleChangeModal}
-                                value={this.state.textDebtor}
-                            />
+
+                            <View>
+                                <ModalSelector
+                                    data={this.state.dataDebtor}
+                                    accessible={true}
+                                    keyExtractor= {item => item.debtor_acct}
+                                    labelExtractor= {item => item.name}
+                                    optionTextStyle={{color:"#333"}}
+                                    selectedItemTextStyle={{color:'#3C85F1'}}
+                                    def
+                                    // scrollViewAccessibilityLabel={'Scrollable options'}
+                                    cancelButtonAccessibilityLabel={'Cancel Button'}
+                                    onChange={(option)=>{ this.handleChangeModal(option)}}>
+                                    <TextInput style={styles.input} onFocus={() => this.selector.open()} 
+                                        placeholder="Debtor"
+                                        editable={false}
+                                        placeholderTextColor='#a9a9a9'
+                                        value={this.state.textDebtor}
+                                    />
+                                </ModalSelector>
+                            </View>
                         </View>
                         <View style={nbStyles.subWrap}>
                             <Button block style={Style.buttonSubmit} onPress={()=>this.handleNavigation()}>

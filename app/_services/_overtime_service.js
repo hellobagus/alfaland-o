@@ -71,6 +71,7 @@ async function getRate(param) {
 }
 
 async function getStartHour(param) {
+    
     headers.token = await sessions.getSess("@Token");
 
     return await axios
@@ -79,5 +80,8 @@ async function getStartHour(param) {
         })
         .then(res => {
             return res.data;
+            
         });
+        
+        
 }

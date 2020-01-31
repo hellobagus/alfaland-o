@@ -16,7 +16,7 @@ const DropdownInput = props => {
                 selectedItemTextStyle={{ color: "#3C85F1" }}
                 accessible={true}
                 keyExtractor={item => item.id}
-                labelExtractor={item => item.name}
+                labelExtractor={item => item.id}
                 cancelButtonAccessibilityLabel={"Cancel Button"}
                 overlayStyle={styles.overlay}
                 optionContainerStyle={styles.optionContainer}
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
         width: null,
         borderRadius: 10,
         justifyContent: "center",
+        fontSize:12,
         alignItems: "center"
     },
     overlay : {

@@ -24,7 +24,8 @@ class BillingCardList extends Component {
     }
     render() {
         
-        const {tower,mdoc_amt,name,doc_date,due_date, descs} = this.props.data
+        const {doc_no,tower,trx_type,mdoc_amt,name,doc_date,due_date, descs} = this.props.data
+        console.log('bil', this.props.data)
         return (
             <Card style={{
                 backgroundColor: 'white',
@@ -35,7 +36,18 @@ class BillingCardList extends Component {
                 paddingHorizontal:10,
             }}>
                 <View style={{paddingVertical:10}}>
+                <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+                <Text style={[Style.textGrey,Style.textSmall]}>
+                            {doc_no}
+                        </Text>
+                        <Text style={[Style.textBlack,Style.textSmall]}>
+                            {trx_type}
+                        </Text>
+
+                </View>
+
                     <View style={{paddingBottom:10,flexDirection:'row', justifyContent:'space-between'}}>
+                       
                         <Text style={[Style.textGrey,Style.textSmall]}>
                             {tower}
                         </Text>
@@ -44,9 +56,11 @@ class BillingCardList extends Component {
                         </Text>
                     </View>
                     <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+                    
                         <Text style={[Style.textBlack,Style.textSmall]}>
                             {name}
                         </Text>
+                      
                         </View>
                         <View style={{flexDirection:'row', justifyContent:'space-between'}}>
 

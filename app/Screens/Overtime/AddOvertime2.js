@@ -18,10 +18,8 @@ import { overtimeService, ticketService } from "../../_services";
 const { width: deviceWidth, height: deviceHeight } = Dimensions.get("window");
 import { _storeData, _getData } from "@Component/StoreAsync";
 import { urlApi } from "@Config";
-import {Modalize} from "react-native-modalize";
+import Modalize from "react-native-modalize";
 import { DateInput, SubmitInput, DropdownInput } from "../../components/Input";
-
-
 
 class AddOvertime extends Component {
     _isMount = false;
@@ -76,21 +74,12 @@ class AddOvertime extends Component {
             endVisible: false,
             dateVisible: false,
 
-            minDate: new Date(),
             startTime: new Date(),
-            start: "",
-            startHour: "",
-            time_prospect: new Date(2018, 11, 1, 0, 0, 0),
-
             endTime: new Date(),
 
             endMinimumDate: new Date(),
 
-            isLoading: false,
-            duration: new Date(Date.UTC(2018, 11, 1, 0, 0, 0)),
-            // StartDate:"",
-            selectedDate:'17:00',
-
+            isLoading: false
         };
 
         console.log("props", props);
@@ -102,22 +91,6 @@ class AddOvertime extends Component {
     async componentDidMount() {
         this._isMount = true;
 
-        
-        const tgl = this.state.time_prospect;
-        console.log('tgl',tgl);
-        const str = this.datatgl;
-        console.log('str',str);
-        const tph = parseInt(this.state.startHour.slice(0,2));
-        const tpm = parseInt(this.state.startHour.slice(3,5));
-        const tm = new Date(2018, 11, 1, tph, tpm, 0);
-        console.log('tph',tm);
-
-        // const 
-        // const tpm = parseInt(this.props.datas.time_prospect.slice(3,5));
-        // const tm = new Date(2018, 11, 1, tph, tpm, 0);
-        // const dm = parseInt(this.props.datas.duration_minute);
-        // const dur = new Date(2018, 11, 1, dh, dm, 0);
-
         const datas = {
             email: await _getData("@User")
         };
@@ -125,12 +98,11 @@ class AddOvertime extends Component {
         this.setState(datas, () => {
             this.getLot();
             this.getDebtor();
-            this.getStartTime();
+            // this.getStartTime()
             this.getOverType();
         });
     }
 
-    
     componentWillUnmount() {
         this._isMount = false;
     }
@@ -164,7 +136,6 @@ class AddOvertime extends Component {
             project: dT.project,
             email: this.state.email
         };
-        
 
         ticketService.getDebtor(formData).then(res => {
             if (res.Error === false) {
@@ -195,31 +166,31 @@ class AddOvertime extends Component {
         });
     };
 
-    getStartTime = () => {
-        const dT = this.state.selectedTower;
+    // getStartTime = () => {
+    //     const dT = this.state.selectedTower;
 
-        const formData = {
-            cons: dT.dbProfile,
-            entity_cd: dT.entity,
-            project_no: dT.project,
-            StartDate: this.state.startTime         
-        };
-        // console.log('start time',)
-        overtimeService.getStartHour(formData).then(res => {
-            
-            if (res.Error === false) {
-                const resData = res.Data;
-                console.log("start", resData)
-                const datatgl = resData.start;
-                console.log('dtgl',datatgl);
-                if (this._isMount) {
-                    this.setState({ StartDate: resData});
-                    console.log('startdate',StartDate);
-
-                }
-            }
-        });
-    };
+    //     const formData = {
+    //         entity_cd: dT.entity,
+    //         project_no: dT.project,
+    //         StartDate: this.state.chosenDate
+    //     };
+    //     fetch(urlApi + "c_overtime/addStart/IFCAPB", {
+    //         method: "POST",
+    //         body: JSON.stringify(formData)
+    //     })
+    //         .then(response => response.json())
+    //         .then(res => {
+    //             if (res.Error === false) {
+    //                 const resData = res.Data[0];
+    //                 if (this._isMount) {
+    //                     this.setState({ startTime: resData.ov_start });
+    //                 }
+    //             }
+    //         })
+    //         .catch(error => {
+    //             console.log(error);
+    //         });
+    // };
 
     getTrxRate = () => {
         const dT = this.state.selectedTower;
@@ -300,7 +271,7 @@ class AddOvertime extends Component {
             });
     };
 
-    onValueChange(value ) {
+    onValueChange(value: string) {
         this.setState({
             selected: value
         });
@@ -372,17 +343,9 @@ class AddOvertime extends Component {
     };
 
     handleDateChange = (name, time) => {
-        const pending = setTimeout(() => {
-            this.setState({ [name]: time }, () => {
-                console.log('endTime',time);
-                if (name == "startTime") {
-                    this.getStartTime();
-
-                }
-            });
-        }, 1000);
+        console.log("time", time);
+        this.setState({ [name]: time });
     };
-
 
     checkUsage = () => {
         const { selectedTower, startTime, endTime } = this.state;
@@ -393,27 +356,24 @@ class AddOvertime extends Component {
             end: moment(endTime).format("DD MMM YYYY HH:mm")
         };
 
+        overtimeService.getUsage(data).then(res => {
+            console.log("res", res);
 
-            overtimeService.getUsage(data).then(res => {
-                console.log("res", res);
-    
-                let total = 0;
-                res.forEach(item => {
-                    total = parseFloat(total) + parseFloat(item.UsageHour);
-                });
-    
-                this.setState({ dataCalculate: res, totalUsage: total }, () => {
-                    this.refs.modalCalculate.open();
-                    Navigation.mergeOptions(this.props.componentId, {
-                        topBar: {
-                            visible: false,
-                            drawBehind: true
-                        }
-                    });
-                });
+            let total = 0;
+            res.forEach(item => {
+                total = parseFloat(total) + parseFloat(item.UsageHour);
             });
 
-        
+            this.setState({ dataCalculate: res, totalUsage: total }, () => {
+                this.refs.modalCalculate.open();
+                Navigation.mergeOptions(this.props.componentId, {
+                    topBar: {
+                        visible: false,
+                        drawBehind: true
+                    }
+                });
+            });
+        });
     };
 
     onModalClose = () => {
@@ -437,30 +397,20 @@ class AddOvertime extends Component {
         const dataHead = [
             {
                 label: "Start Overtime ",
-                value: ": " +moment(startTime).format("DD MMM YYYY HH:mm")
+                value: ": "+moment(startTime).format("DD MMM YYYY HH:mm")
             },
             {
                 label: "End Overtime ",
-                value: ": " +moment(endTime).format("DD MMM YYYY HH:mm")
+                value: ": "+moment(endTime).format("DD MMM YYYY HH:mm")
             }
         ];
         return [
             <View style={nbStyles.content__header} key="0">
                 <Text style={nbStyles.content__heading}>Detail Overtime</Text>
-                {dataHead.map((data, key) => (
-                    <View
-                        style={{
-                            flexDirection: "row",
-                            justifyContent: "space-between"
-                        }}
-                        key={key}
-                    >
-                        <Text style={(Style.textBlack, Style.textMedium)}>
-                            {data.label}
-                        </Text>
-                        <Text style={(Style.textBlack, Style.textMedium)}>
-                            {data.value}
-                        </Text>
+                {dataHead.map((data,key) => (
+                    <View style={{flexDirection : "row",justifyContent : 'space-between'}} key={key}>
+                        <Text style={Style.textBlack,Style.textMedium}>{data.label}</Text>
+                        <Text style={Style.textBlack,Style.textMedium}>{data.value}</Text>
                     </View>
                 ))}
             </View>,
@@ -585,7 +535,7 @@ class AddOvertime extends Component {
                                     label="Debtor"
                                     data={this.state.dataDebtor}
                                     onChange={this.handleDebtorChange}
-                                    value={this.state.debtorAcct+' '+this.state.textDebtor}
+                                    value={this.state.textDebtor}
                                 />
                             </View>
 
@@ -609,28 +559,19 @@ class AddOvertime extends Component {
 
                             <View style={nbStyles.subWrap}>
                                 <DateInput
-                                    mode={"datetime"}
                                     name="startTime"
                                     label="Start Date"
-                                    date={moment(`2000/10/1 ${this.state.selectedDate}`).toDate()}
-                                    minimumDate={this.state.minDate}
                                     onChange={this.handleDateChange}
                                     value={this.state.startTime}
-                                    {...this.props}
                                 />
                             </View>
 
                             <View style={nbStyles.subWrap}>
                                 <DateInput
-                                    mode={"datetime"}
                                     name="endTime"
-                                    minuteInterval={30}
                                     label="End Date"
-                                    date={moment(`2000/10/1 ${this.state.selectedDate}`).toDate()}
-                                    minimumDate={this.state.startTime}
                                     onChange={this.handleDateChange}
                                     value={this.state.endTime}
-                                    {...this.props}
                                 />
                             </View>
                             <View style={nbStyles.subWrap}>

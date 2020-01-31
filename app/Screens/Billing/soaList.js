@@ -100,12 +100,12 @@ class SoaList extends Component {
                     let totalInv = 0;
                     resData.map(val => {
                         data.push([
-                            moment(val.doc_date).format("DD MMM YYYY"),
-                            val.descs +",\n"+ val.doc_no,
+                            moment(val.due_date).format("DD MMM YYYY"),
+                            val.descs +",\n"+ val.debit_doc +",\n"+ moment(val.debit_date).format("DD MMM YYYY")+",\n"+val.credit_doc+",\n"+val.mdoc_amt,
                             numFormat(
                                 val.class == "M" || val.class == "C"
-                                    ? -1 * val.mdoc_amt
-                                    : val.mdoc_amt
+                                    ? -1 * val.fbal_amt
+                                    : val.fbal_amt
                             )
                         ]);
                         totalInv = totalInv + parseFloat(val.previous_balance);
@@ -113,8 +113,8 @@ class SoaList extends Component {
                             jumlah +
                             parseFloat(
                                 val.class == "M" || val.class == "C"
-                                    ? -1 * val.mdoc_amt
-                                    : val.mdoc_amt
+                                    ? -1 * val.fbal_amt
+                                    : val.fbal_amt
                             );
                     });
                     console.log("totalInv", totalInv);
@@ -139,7 +139,7 @@ class SoaList extends Component {
         const totalAmt = parseFloat(this.state.jumlah);
         const endBalance = totalInv + totalAmt;
         const tables = {
-            tableHead: ["Doc Date", "Description", "Amount"],
+            tableHead: ["Doc Date", "Description", "Balance"],
             jumlah: ["", "Total", numFormat(totalAmt)]
         };
 
@@ -150,9 +150,9 @@ class SoaList extends Component {
                     {this.state.dataRow.length > 0 ? (
                         <View style={nbStyles.wrap}>
                             <Text style={Style.textBlack}>Debtor Name : {item.debtor.name}</Text>
-                            <Text style={Style.textBlack}>
+                            {/* <Text style={Style.textBlack}>
                                 Previous Balance : {numFormat(totalInv)}
-                            </Text>
+                            </Text> */}
                             <Text style={Style.textBlack}>
                                 Periode :{" "}
                                 {moment(item.startDate).format("DD MMM YYYY")} -{" "}
@@ -180,9 +180,9 @@ class SoaList extends Component {
                                 />
                             </Table>
 
-                            <Text>
+                            {/* <Text>
                                 End Balance : Rp. {numFormat(endBalance)}
-                            </Text>
+                            </Text> */}
                         </View>
                     ) : this.state.isLoad ? (
                         <View style={nbStyles.nullList}>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
     View,
     Text,
@@ -8,77 +8,32 @@ import {
     Dimensions
 } from "react-native";
 import DateTimePicker from "react-native-modal-datetime-picker";
-const { height: deviceHeight, width: deviceWidth } = Dimensions.get("window");
-import moment from "moment";
-import Style from "../../Theme/Style";
 import { Navigation } from "react-native-navigation";
-import DatePicker from 'react-native-date-picker';
-import { overtimeService, ticketService } from "../../_services";
+import moment from "moment";
+const { height: deviceHeight, width: deviceWidth } = Dimensions.get("window");
+import Style from "../../Theme/Style";
 
-
-const DateInput = props => {
+const DatetimeInput = props => {
     const [time, setTime] = useState(props.value);
+    const [backgroundColor] = useState(props.style);
     const [visible, setVisible] = useState(false);
 
-    const handlePicker = val => {
+    const handlePicker = (val) =>{
         setTime(val);
         setVisible(false);
-        console.log('val',val);
-        props.onChange((name = props.name), val);
-    };
-
-    const renderChild = () => {
-        return (
-            <DatePicker
-                date={time}
-                locale="id"
-                onDateChange={handlePicker}
-                {...props}
-            />
-        );
-    };
-
-    const setVisibleModal = () => {
-        // const modal = modalTgl.current;
-        // Navigation.showOverlay();
-        // if(modal){
-        //     modal.open();
-        // }
-        Navigation.showModal({
-            stack: {
-                children: [
-                    {
-                        component: {
-                            name: "modal.FixedContent",
-                            passProps: {
-                                child: renderChild()
-                            },
-                            options: {
-                                screenBackgroundColor: "transparent",
-                                modalPresentationStyle: "overCurrentContext",
-                                topBar: {
-                                    visible: false,
-                                    animate: true
-                                }
-                            }
-                        }
-                    }
-                ]
-            }
-        });
-    };
-
-    useEffect(() => {
-        setTime(props.value);
-    }, [props.value]);
+        props.onChange( name = props.name, val)
+    }
 
     return (
         <View>
             <Text style={Style.textBlack}>{props.label}</Text>
-            <TouchableOpacity pointerEvents="auto" onPress={setVisibleModal}>
+            <TouchableOpacity
+                pointerEvents="auto"
+                onPress={() => setVisible(!visible)}
+            >
                 <View pointerEvents="none">
                     <TextInput
-                        style={[Style.textBlack, styles.input]}
+                        style={[Style.textBlack,styles.input]}
                         placeholder={props.label}
                         editable={false}
                         placeholderTextColor="#a9a9a9"
@@ -86,30 +41,31 @@ const DateInput = props => {
                             time == ""
                                 ? ""
                                 : moment(time).format(
-                                      props.format
-                                          ? props.format
-                                          : "dddd, DD MMMM YYYY HH:mm"
+                                      "DD/MM/YYYY HH:mm"
                                   )
                         }
+                        // {...props}
                     />
                 </View>
             </TouchableOpacity>
             <DateTimePicker
-                mode="datetime"
-                is24Hour={false}
-                date={props.date}
+                mode={props.mode}
+                is24Hour={true}
+                date={time}
+                style={backgroundColor}
                 isVisible={visible}
-                minimumDate={props.min ? props.min : new Date()}
+                minimumDate={new Date()}
                 onConfirm={handlePicker}
-                confirmBtnText="Confirm"
                 onCancel={() => setVisible(!visible)}
+                // datePickerModeAndroid='spinner'
+                // timePickerModeAndroid="spinner"
                 {...props}
             />
         </View>
     );
 };
 
-export default DateInput;
+export default DatetimeInput;
 
 const styles = StyleSheet.create({
     input: {
